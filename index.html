@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作業療法士（OT）の魅力探究ナビ | こころとくらしを創るリハビリのスペシャリスト</title>
+  <meta name="description" content="高校生・一般向け 作業療法士（OT）魅力発見ポータル。理学療法士（PT）や言語聴覚士（ST）との違い・差別化、適職診断、次世代テクノロジーリハビリまで徹底解説！">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-500 selection:text-white">
+
+  <!-- ヘッダー / ナビゲーション -->
+  <header id="mainNav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/85 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- ロゴ -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center text-white shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform">
+          <i data-lucide="sparkles" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-xs font-bold tracking-wider text-teal-600 uppercase block font-display">Occupational Therapy</span>
+          <span class="text-xl font-extrabold text-slate-900 tracking-tight flex items-center gap-1.5">
+            OT NAVI <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-teal-100 text-teal-700">魅力解剖</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- デスクトップメニュー -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-bold text-slate-600">
+        <a href="#about" class="hover:text-teal-600 transition-colors">作業療法とは？</a>
+        <a href="#compare" class="hover:text-teal-600 transition-colors flex items-center gap-1">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
+          </span>
+          3大リハ職徹底比較
+        </a>
+        <a href="#diagnosis" class="hover:text-teal-600 transition-colors">適職診断テスト</a>
+        <a href="#fields" class="hover:text-teal-600 transition-colors">4つの活躍舞台</a>
+        <a href="#future-preview" class="hover:text-teal-600 transition-colors">数字と将来性</a>
+        <a href="nextgen-ot.html" class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-600 text-white shadow-sm hover:shadow-cyan-500/25 hover:scale-105 transition-all text-xs font-black tracking-wide">
+          <i data-lucide="cpu" class="w-4 h-4"></i>
+          次世代OT特設ラボ
+        </a>
+      </nav>
+
+      <!-- モバイルメニュー開閉ボタン -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- モバイルドロップダウン -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-b border-slate-200 px-6 py-4 space-y-3">
+      <a href="#about" class="block text-slate-700 font-bold py-2 border-b border-slate-100">作業療法とは？</a>
+      <a href="#compare" class="block text-slate-700 font-bold py-2 border-b border-slate-100">3大リハ職徹底比較</a>
+      <a href="#diagnosis" class="block text-slate-700 font-bold py-2 border-b border-slate-100">適職診断テスト</a>
+      <a href="#fields" class="block text-slate-700 font-bold py-2 border-b border-slate-100">4つの活躍舞台</a>
+      <a href="nextgen-ot.html" class="block text-teal-600 font-bold py-2">⚡ 次世代OT特設ラボ（AI・3Dプリンター）</a>
+    </div>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-b from-teal-50/60 via-white to-slate-50 cyber-grid-teal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- ヒーロー左側：コピー -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100/90 text-teal-800 text-xs font-black tracking-wide border border-teal-200/60 shadow-xs">
+            <i data-lucide="heart-pulse" class="w-4 h-4 text-teal-600"></i>
+            高校生・一般向け リハビリテーション進路＆キャリアガイド
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.15] tracking-tight">
+            「生きる」を、<br>
+            <span class="text-gradient-teal">もう一度おもしろく。</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-600 leading-relaxed font-medium">
+            ただ体を動かせるようにするだけじゃない。<br class="hidden sm:inline">
+            大好きな料理、ゲーム、絵を描くこと、友達とおしゃべりすること——<br>
+            <strong class="text-slate-800 font-bold">その人にとっての「人生の楽しみ・生きがい（作業）」を取り戻すクリエイター</strong>、それが作業療法士（OT）です。
+          </p>
+
+          <!-- 3大特徴クイックピル -->
+          <div class="grid grid-cols-3 gap-3 pt-2">
+            <div class="bg-white/90 border border-slate-200/80 rounded-2xl p-3 shadow-xs">
+              <span class="text-xs font-bold text-teal-600 block">心とからだ</span>
+              <span class="text-sm font-extrabold text-slate-800">両方を支える唯一職</span>
+            </div>
+            <div class="bg-white/90 border border-slate-200/80 rounded-2xl p-3 shadow-xs">
+              <span class="text-xs font-bold text-teal-600 block">社会の需要</span>
+              <span class="text-sm font-extrabold text-slate-800">就職率 ほぼ100%</span>
+            </div>
+            <div class="bg-white/90 border border-slate-200/80 rounded-2xl p-3 shadow-xs">
+              <span class="text-xs font-bold text-cyan-600 block">新時代リハビリ</span>
+              <span class="text-sm font-extrabold text-slate-800">3Dプリンタ & AI活用</span>
+            </div>
+          </div>
+
+          <!-- アクションボタン -->
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="#compare" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-teal-600 text-white font-bold text-base shadow-lg shadow-teal-600/30 hover:bg-teal-700 hover:scale-105 transition-all">
+              <i data-lucide="scale" class="w-5 h-5"></i>
+              理学療法士(PT)との違いを見る
+            </a>
+            <a href="#diagnosis" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-slate-800 font-bold text-base border border-slate-300/80 shadow-xs hover:bg-slate-50 hover:border-slate-400 transition-all">
+              <i data-lucide="help-circle" class="w-5 h-5 text-teal-600"></i>
+              適職診断をする（3分）
+            </a>
+          </div>
+        </div>
+
+        <!-- ヒーロー右側：メインビジュアル -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+            <img src="assets/images/hero_ot_main.jpg" alt="作業療法士の現場風景：笑顔で患者さんの手先作業を支援する" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <div class="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-semibold mb-1">
+                リアルなリハビリ現場
+              </div>
+              <p class="text-sm font-medium text-slate-100">
+                患者さんの「もう一度やりたい！」という想いに二人三脚で向き合う
+              </p>
+            </div>
+          </div>
+
+          <!-- フローティングバッジ -->
+          <div class="absolute -top-4 -right-4 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-slate-100 animate-float hidden sm:flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center text-orange-600">
+              <i data-lucide="palette" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs text-slate-500 font-bold">アイデアと工夫の医療</p>
+              <p class="text-sm font-extrabold text-slate-800">世界に1つの道具を作る</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 次世代特設バナー案内（ヒーロー直下のティザー） -->
+  <div class="bg-gradient-to-r from-slate-900 via-teal-950 to-slate-900 border-y border-teal-500/30 py-4 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-white">
+      <div class="flex items-center gap-3">
+        <span class="flex h-3 w-3 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
+        </span>
+        <span class="text-xs sm:text-sm font-bold tracking-wide">
+          【特設オープン】AI・3Dプリンター・VRが変える！次世代作業療法テクノロジーラボ公開中
+        </span>
+      </div>
+      <a href="nextgen-ot.html" class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black text-xs transition-colors shrink-0 shadow-sm">
+        特設サイトをのぞく <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- SECTION 1: 作業療法士（OT）とは？ -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-bold border border-teal-200">
+          <i data-lucide="book-open" class="w-4 h-4"></i> BASIC KNOWLEDGE
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900">
+          そもそも、<span class="text-teal-600">作業療法士（OT）</span>ってどんな仕事？
+        </h2>
+        <p class="text-slate-600 leading-relaxed">
+          「作業」と聞くと、工場や大工仕事のようなものを想像するかもしれません。しかし、作業療法の「作業」とは、<strong class="text-slate-800">人が生きるために行うすべての活動</strong>のことです。
+        </p>
+      </div>
+
+      <!-- 作業の3つの輪 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+        <!-- 輪 1 -->
+        <div class="bg-gradient-to-b from-teal-50/50 to-slate-50 border border-teal-100 rounded-3xl p-8 hover:shadow-lg transition-all group">
+          <div class="w-14 h-14 rounded-2xl bg-teal-500 text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-md shadow-teal-500/20">
+            <i data-lucide="utensils" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">1. 身の回りの生活（ADL）</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            ごはんを食べる、服を着替える、お風呂に入る、トイレに行く、スマホを操作する。当たり前の日常を自分の力でできる喜びを取り戻します。
+          </p>
+          <div class="text-xs font-bold text-teal-700 bg-teal-100/70 px-3 py-1.5 rounded-lg inline-block">
+            例：麻痺した手でボタンを留める練習
+          </div>
+        </div>
+
+        <!-- 輪 2 -->
+        <div class="bg-gradient-to-b from-orange-50/50 to-slate-50 border border-orange-100 rounded-3xl p-8 hover:shadow-lg transition-all group">
+          <div class="w-14 h-14 rounded-2xl bg-orange-500 text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-md shadow-orange-500/20">
+            <i data-lucide="gamepad-2" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">2. 趣味・遊び・生きがい</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            ゲーム、料理、園芸、音楽、スポーツ、推し活…。「これがあるから毎日が楽しい！」という、その人にとって一番大切な情熱を諦めさせません。
+          </p>
+          <div class="text-xs font-bold text-orange-700 bg-orange-100/70 px-3 py-1.5 rounded-lg inline-block">
+            例：片手で操作できる特製コントローラー作り
+          </div>
+        </div>
+
+        <!-- 輪 3 -->
+        <div class="bg-gradient-to-b from-blue-50/50 to-slate-50 border border-blue-100 rounded-3xl p-8 hover:shadow-lg transition-all group">
+          <div class="w-14 h-14 rounded-2xl bg-blue-500 text-white flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-md shadow-blue-500/20">
+            <i data-lucide="briefcase" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">3. 仕事・学校・社会参加</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            職場復帰、学校への登校、地域コミュニティへの参加。人とつながり、社会の中で自分らしく役割を持って生きる未来を支えます。
+          </p>
+          <div class="text-xs font-bold text-blue-700 bg-blue-100/70 px-3 py-1.5 rounded-lg inline-block">
+            例：デスク環境の調整や復職プログラム
+          </div>
+        </div>
+      </div>
+
+      <!-- OTだけの最大の武器：心と身体のダブルアプローチ -->
+      <div class="mt-16 bg-gradient-to-r from-teal-900 via-slate-800 to-teal-950 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden shadow-xl">
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-400/20 text-teal-300 text-xs font-bold border border-teal-400/30">
+              <i data-lucide="shield-check" class="w-4 h-4"></i> リハビリ職で唯一の独自強み
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-black leading-snug">
+              「からだ」だけでなく、<span class="text-teal-300">「こころ」の病気や悩みも支えられる</span>唯一のリハビリテーション職
+            </h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              作業療法士は、骨折や脳卒中などの「身体の病気」だけでなく、うつ病や統合失調症などの「精神科領域」、さらには自閉症やADHDなどの「子どもの発達障害」まで、法律上リハビリテーションを行うことが認められている唯一の国家資格です。
+            </p>
+          </div>
+          <div class="lg:col-span-4 flex flex-col gap-3">
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-teal-400/20 flex items-center justify-center text-teal-300 font-bold text-lg">
+                体
+              </div>
+              <div>
+                <p class="font-bold text-sm">身体障害リハビリ</p>
+                <p class="text-xs text-slate-300">筋肉・関節・脳・手の精密動作</p>
+              </div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-cyan-400/20 flex items-center justify-center text-cyan-300 font-bold text-lg">
+                心
+              </div>
+              <div>
+                <p class="font-bold text-sm">精神・こころのリハビリ</p>
+                <p class="text-xs text-slate-300">不安・意欲低下・メンタルケア</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: 徹底差別化！リハビリ3大職種の決定的な違い（PT vs OT vs ST） -->
+  <section id="compare" class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold border border-blue-200">
+          <i data-lucide="git-compare" class="w-4 h-4 text-blue-600"></i> COMPARISON GUIDE
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900">
+          どこが違うの？ <span class="text-teal-600">PT・OT・ST</span> 徹底差別化比較
+        </h2>
+        <p class="text-slate-600 leading-relaxed">
+          リハビリテーションの現場を支える3大国家資格。よく似ていると言われますが、<strong class="text-slate-800">患者さんへのアプローチの「目的」と「得意技」が全く異なります！</strong>
+        </p>
+      </div>
+
+      <!-- 3職種集合写真バナー -->
+      <div class="mt-12 rounded-3xl overflow-hidden shadow-xl border border-slate-200 relative group">
+        <img src="assets/images/rehab_specialists.jpg" alt="リハビリテーションの3職種：理学療法士(PT)、作業療法士(OT)、言語聴覚士(ST)" class="w-full h-72 sm:h-96 object-cover object-center group-hover:scale-102 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex items-end p-6 sm:p-10">
+          <div class="text-white max-w-2xl">
+            <span class="text-xs font-black uppercase tracking-widest text-teal-400 block mb-1">Rehabilitation Trio</span>
+            <h3 class="text-xl sm:text-2xl font-black mb-2">3職種がチームとなり、患者さんの人生を全方位でサポート</h3>
+            <p class="text-xs sm:text-sm text-slate-200">
+              左：理学療法士 (PT: 基本動作) ／ 中央：作業療法士 (OT: 心と生活・作業) ／ 右：言語聴覚士 (ST: 発話と嚥下)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3職種の役割対比カード -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+        <!-- PT カード -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-slate-200 hover:border-blue-400 transition-all shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-blue-100 text-blue-700">PT</span>
+            <span class="text-xs font-bold text-slate-400">Physical Therapist</span>
+          </div>
+          <h3 class="text-2xl font-black text-slate-900 mb-2">理学療法士 (PT)</h3>
+          <p class="text-xs font-bold text-blue-600 mb-4">「立つ・歩く・座る」動作のスペシャリスト</p>
+          <div class="space-y-3 text-sm text-slate-600 border-t border-slate-100 pt-4">
+            <p><strong>主な対象部位：</strong>足腰・体幹・大きな関節</p>
+            <p><strong>アプローチ：</strong>筋トレ、関節可動域訓練、歩行訓練、温熱・電気治療</p>
+            <p><strong>目指すゴール：</strong>ベッドから起き上がり、歩いて移動できるようにすること</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 bg-slate-50 rounded-2xl p-4">
+            <p class="text-xs text-slate-500 font-bold mb-1">一言でいうと？</p>
+            <p class="text-sm font-extrabold text-slate-800">「身体を動かすための“土台（足腰）”を創る人」</p>
+          </div>
+        </div>
+
+        <!-- OT カード（強調） -->
+        <div class="bg-gradient-to-b from-teal-50 to-white rounded-3xl p-6 sm:p-8 border-3 border-teal-500 shadow-xl relative transform md:-translate-y-2">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-teal-600 text-white text-xs font-black shadow-md flex items-center gap-1.5">
+            <i data-lucide="crown" class="w-3.5 h-3.5"></i> 人生を取り戻すクリエイター
+          </div>
+          <div class="flex items-center justify-between mb-4 mt-2">
+            <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-teal-600 text-white">OT</span>
+            <span class="text-xs font-bold text-teal-700">Occupational Therapist</span>
+          </div>
+          <h3 class="text-2xl font-black text-slate-900 mb-2">作業療法士 (OT)</h3>
+          <p class="text-xs font-bold text-teal-600 mb-4">「手先・暮らし・こころ・生きがい」のプロ</p>
+          <div class="space-y-3 text-sm text-slate-700 border-t border-teal-100 pt-4">
+            <p><strong>主な対象部位：</strong>手・指先・脳（高次脳機能）・こころ</p>
+            <p><strong>アプローチ：</strong>手先のリハビリ、料理・入浴・趣味の訓練、自助具・3Dプリンタ作成、メンタルケア</p>
+            <p><strong>目指すゴール：</strong>その人らしい生きがいを持ち、自分らしく暮らせるようにすること</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-teal-100 bg-teal-100/60 rounded-2xl p-4">
+            <p class="text-xs text-teal-800 font-bold mb-1">一言でいうと？</p>
+            <p class="text-sm font-extrabold text-teal-950">「人生の『やりたい！』をカタチにする人」</p>
+          </div>
+        </div>
+
+        <!-- ST カード -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-slate-200 hover:border-amber-400 transition-all shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-amber-100 text-amber-700">ST</span>
+            <span class="text-xs font-bold text-slate-400">Speech Therapist</span>
+          </div>
+          <h3 class="text-2xl font-black text-slate-900 mb-2">言語聴覚士 (ST)</h3>
+          <p class="text-xs font-bold text-amber-600 mb-4">「話す・聞く・食べる(飲み込み)」のプロ</p>
+          <div class="space-y-3 text-sm text-slate-600 border-t border-slate-100 pt-4">
+            <p><strong>主な対象部位：</strong>口・舌・のど・聴覚・言語中枢</p>
+            <p><strong>アプローチ：</strong>発音訓練、失語症リハビリ、嚥下（飲み込み）検査と訓練、補聴器指導</p>
+            <p><strong>目指すゴール：</strong>家族と会話を交わし、安全に美味しい食事をとれるようにすること</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 bg-slate-50 rounded-2xl p-4">
+            <p class="text-xs text-slate-500 font-bold mb-1">一言でいうと？</p>
+            <p class="text-sm font-extrabold text-slate-800">「人と心をつなぐ“ことばと食事”を創る人」</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- レーダーチャート & 違いが一目でわかる対比表 -->
+      <div class="mt-16 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+        <h3 class="text-2xl font-extrabold text-slate-900 text-center mb-2">
+          領域別 レーダーチャート比較
+        </h3>
+        <p class="text-center text-xs sm:text-sm text-slate-500 mb-8">
+          それぞれの専門職が得意とする領域の違い（視覚的な特化領域の比較）
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- レーダーチャート描画部 -->
+          <div class="lg:col-span-6 flex justify-center">
+            <div class="chart-container" style="height: 340px;">
+              <canvas id="rehabRadarChart"></canvas>
+            </div>
+          </div>
+
+          <!-- 対比表 -->
+          <div class="lg:col-span-6 overflow-x-auto">
+            <table class="w-full text-left text-sm border-collapse">
+              <thead>
+                <tr class="border-b-2 border-slate-200 text-xs font-black text-slate-500 uppercase">
+                  <th class="py-3 px-3">比較項目</th>
+                  <th class="py-3 px-3 text-blue-600">PT (理学療法)</th>
+                  <th class="py-3 px-3 text-teal-600 bg-teal-50/70 rounded-t-lg">OT (作業療法)</th>
+                  <th class="py-3 px-3 text-amber-600">ST (言語聴覚)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-xs sm:text-sm">
+                <tr>
+                  <td class="py-3 px-3 font-bold text-slate-700">主な対象動作</td>
+                  <td class="py-3 px-3">立つ・座る・歩く</td>
+                  <td class="py-3 px-3 bg-teal-50/70 font-bold text-teal-900">手先の作業・生活全般</td>
+                  <td class="py-3 px-3">話す・食べる・聴く</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-3 font-bold text-slate-700">使うリハビリ道具</td>
+                  <td class="py-3 px-3">平行棒・平行トレッドミル</td>
+                  <td class="py-3 px-3 bg-teal-50/70 font-bold text-teal-900">キッチン・工芸・3Dプリンタ・ゲーム</td>
+                  <td class="py-3 px-3">絵カード・タブレット・嚥下食</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-3 font-bold text-slate-700">精神科領域の担当</td>
+                  <td class="py-3 px-3 text-slate-400">× (原則対象外)</td>
+                  <td class="py-3 px-3 bg-teal-50/70 font-bold text-teal-900">◎ (正式な専門領域)</td>
+                  <td class="py-3 px-3 text-slate-400">△ (一部高次脳のみ)</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-3 font-bold text-slate-700">道具の改造・工作</td>
+                  <td class="py-3 px-3 text-slate-400">△ (装具の適合確認)</td>
+                  <td class="py-3 px-3 bg-teal-50/70 font-bold text-teal-900">◎ (自助具の設計・製作)</td>
+                  <td class="py-3 px-3 text-slate-400">△ (会話ツールの選定)</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-3 font-bold text-slate-700">患者さんの生きがい</td>
+                  <td class="py-3 px-3">移動の自由</td>
+                  <td class="py-3 px-3 bg-teal-50/70 font-bold text-teal-900">人生の「やりたい」全般</td>
+                  <td class="py-3 px-3">会話と食事の喜び</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- シチュエーション別アプローチの違い（ストーリーで理解する） -->
+      <div class="mt-16">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <span class="text-xs font-bold px-3 py-1 rounded-full bg-slate-200 text-slate-700">CASE STUDY</span>
+          <h3 class="text-2xl font-black text-slate-900 mt-2">
+            「ある患者さん」に対するアプローチの違い
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-500">
+            同じ患者さんでも、職種によって支える角度が全く違います！タブを切り替えてみてください。
+          </p>
+        </div>
+
+        <!-- タブボタン -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+          <button class="case-tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-teal-600 text-white shadow-md transition-all" data-case="chef">
+            🍳 事例1：脳卒中で倒れたパン職人さん
+          </button>
+          <button class="case-tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-case="student">
+            ⚽ 事例2：事故で車椅子になった高校サッカー部員
+          </button>
+          <button class="case-tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-case="child">
+            🎨 事例3：手先が不器用で学校が辛い小学生
+          </button>
+        </div>
+
+        <!-- 事例1 パネル -->
+        <div id="case-chef" class="case-panel bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+          <div class="border-b border-slate-100 pb-4 mb-6">
+            <span class="text-xs font-bold text-teal-600">CASE 01</span>
+            <h4 class="text-xl font-bold text-slate-900">「もう一度パンを焼いてお店を開きたい」脳卒中で右半身に麻痺が残った50代男性</h4>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-blue-50/60 rounded-2xl p-5 border border-blue-100">
+              <span class="text-xs font-black text-blue-600 block mb-1">PT（理学療法士）の支援</span>
+              <h5 class="font-extrabold text-slate-900 mb-2">立ち作業と移動の足腰を作る</h5>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                パン工房で長時間立って作業できるよう、足腰の筋力やバランス能力を鍛え、自宅からお店まで一人で安全に歩いて移動できる足の装具を調整します。
+              </p>
+            </div>
+            <div class="bg-teal-50 rounded-2xl p-5 border-2 border-teal-500 shadow-sm">
+              <span class="text-xs font-black text-teal-700 block mb-1">OT（作業療法士）の支援 ⭐</span>
+              <h5 class="font-extrabold text-teal-950 mb-2">パンを成形する手先と工房環境を再設計</h5>
+              <p class="text-xs text-slate-700 leading-relaxed">
+                生地を丸める手の感覚を訓練。麻痺した右手でも扱えるオリジナルのトングを3Dプリンターで自作し、片手でボウルを固定する器具を設置。また「パンが焼けないかもしれない」という深い落ち込みに寄り添い、自信を回復させます！
+              </p>
+            </div>
+            <div class="bg-amber-50/60 rounded-2xl p-5 border border-amber-100">
+              <span class="text-xs font-black text-amber-600 block mb-1">ST（言語聴覚士）の支援</span>
+              <h5 class="font-extrabold text-slate-900 mb-2">お客様との注文のやりとり</h5>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                脳梗塞の後遺症で言葉が出にくくなった場合（失語症）、お客様との注文の受け答えやスタッフへの指示ができるよう、発話訓練やタブレット会話アプリの導入を支援します。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 事例2 パネル -->
+        <div id="case-student" class="case-panel hidden bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+          <div class="border-b border-slate-100 pb-4 mb-6">
+            <span class="text-xs font-bold text-teal-600">CASE 02</span>
+            <h4 class="text-xl font-bold text-slate-900">「学校に戻って友達と一緒に卒業したい」脊髄損傷で車椅子生活になった高校生</h4>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-blue-50/60 rounded-2xl p-5 border border-blue-100">
+              <span class="text-xs font-black text-blue-600 block mb-1">PT（理学療法士）の支援</span>
+              <h5 class="font-extrabold text-slate-900 mb-2">ベッドから車椅子への移乗・腕の筋力</h5>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                車椅子を自力で長時間漕ぐための上半身の筋力トレーニングや、ベッド・車・トイレへ自分で乗り移る（移乗動作）テクニックを徹底して身につけます。
+              </p>
+            </div>
+            <div class="bg-teal-50 rounded-2xl p-5 border-2 border-teal-500 shadow-sm">
+              <span class="text-xs font-black text-teal-700 block mb-1">OT（作業療法士）の支援 ⭐</span>
+              <h5 class="font-extrabold text-teal-950 mb-2">学校の教室・勉強・ゲーム・部活復帰</h5>
+              <p class="text-xs text-slate-700 leading-relaxed">
+                高校に実際に出向いて教室の段差や机の高さを調査（環境調整）。ノートをとる筆記用具の工夫、友達と遊ぶゲームのコントローラー調整、サッカー部マネージャーとしての新しい役割づくりを共に考えます！
+              </p>
+            </div>
+            <div class="bg-amber-50/60 rounded-2xl p-5 border border-amber-100">
+              <span class="text-xs font-black text-amber-600 block mb-1">ST（言語聴覚士）の支援</span>
+              <h5 class="font-extrabold text-slate-900 mb-2">呼吸機能と発声のケア</h5>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                首に近い高位の損傷がある場合、呼吸筋の低下による声の出しにくさや食事のむせを予防するための呼吸訓練や嚥下指導を行います。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 事例3 パネル -->
+        <div id="case-child" class="case-panel hidden bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+          <div class="border-b border-slate-100 pb-4 mb-6">
+            <span class="text-xs font-bold text-teal-600">CASE 03</span>
+            <h4 class="text-xl font-bold text-slate-900">「ハサミが使えない、友達と遊べない」感覚統合の課題がある発達凸凹の7歳児</h4>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-blue-50/60 rounded-2xl p-5 border border-blue-100">
+              <span class="text-xs font-black text-blue-600 block mb-1">PT（理学療法士）の支援</span>
+              <h5 class="font-extrabold text-slate-900 mb-2">粗大運動（走る・跳ぶ・姿勢）</h5>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                体幹がふにゃふにゃして椅子に座り続けられない子に対し、バランスボールやアスレチック運動で全身の筋緊張や姿勢保持力を高めます。
+              </p>
+            </div>
+            <div class="bg-teal-50 rounded-2xl p-5 border-2 border-teal-500 shadow-sm">
+              <span class="text-xs font-black text-teal-700 block mb-1">OT（作業療法士）の支援 ⭐</span>
+              <h5 class="font-extrabold text-teal-950 mb-2">遊びを通じた感覚統合・手先・集団適応</h5>
+              <p class="text-xs text-slate-700 leading-relaxed">
+                ブランコやボルダリング遊びで脳の「感覚」を整理。粘土やお絵描きで指先の微細運動を育て、ハサミやお箸が持てるようにします。「ルールを守って友達と遊ぶ楽しさ」を育みます！
+              </p>
+            </div>
+            <div class="bg-amber-50/60 rounded-2xl p-5 border border-amber-100">
+              <span class="text-xs font-black text-amber-600 block mb-1">ST（言語聴覚士）の支援</span>
+              <h5 class="font-extrabold text-slate-900 mb-2">言葉の遅れ・コミュニケーション</h5>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                言葉がうまく出ない、相手の指示が聞き取れない子どもに対して、絵カードやジェスチャーを交えながら語彙を増やし、思いを伝える練習を行います。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: インタラクティブ適職診断テスト（高校生向け） -->
+  <section id="diagnosis" class="py-20 bg-gradient-to-b from-white via-teal-50/40 to-slate-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-bold border border-orange-200">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-600"></i> 3分でわかる無料シミュレーター
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900">
+          あなたにピッタリの<span class="text-teal-600">リハビリ職 診断テスト</span>
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          4つの直感的な質問に答えるだけ！あなたの性格や興味に一番マッチするリハビリテーション職（OT/PT/ST）をAIロジックで判定します。
+        </p>
+      </div>
+
+      <!-- 診断フォーム -->
+      <form id="diagnosticForm" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl space-y-8">
+        <!-- Q1 -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-full bg-teal-600 text-white font-extrabold text-xs flex items-center justify-center">Q1</span>
+            <label class="font-extrabold text-slate-900 text-base sm:text-lg">普段、どんなことにワクワクしますか？</label>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pl-9">
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q1" value="ot" class="mt-1 text-teal-600 focus:ring-teal-500" required>
+              <span class="text-xs sm:text-sm font-medium text-slate-700">工作、料理、イラスト、ゲームなど、手先を使ったクリエイティブな工夫</span>
+            </label>
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-blue-500 hover:bg-blue-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q1" value="pt" class="mt-1 text-blue-600 focus:ring-blue-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">スポーツ、筋トレ、身体を動かして記録を伸ばしたり汗を流すこと</span>
+            </label>
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-amber-500 hover:bg-amber-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q1" value="st" class="mt-1 text-amber-600 focus:ring-amber-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">読書や言葉の仕組み、友達とじっくり深いおしゃべりをすること</span>
+            </label>
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q1" value="ot_pt" class="mt-1 text-teal-600 focus:ring-teal-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">困っている人がいたらアイデアを出して助けてあげたい</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-full bg-teal-600 text-white font-extrabold text-xs flex items-center justify-center">Q2</span>
+            <label class="font-extrabold text-slate-900 text-base sm:text-lg">人のどんなところをサポートしてみたい？</label>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pl-9">
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q2" value="ot" class="mt-1 text-teal-600 focus:ring-teal-500" required>
+              <span class="text-xs sm:text-sm font-medium text-slate-700">「その人らしい暮らし」や「心の元気」を取り戻して笑顔にしたい</span>
+            </label>
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-blue-500 hover:bg-blue-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q2" value="pt" class="mt-1 text-blue-600 focus:ring-blue-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">「もう一度自分の足で歩けた！」という感動の瞬間を支えたい</span>
+            </label>
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-amber-500 hover:bg-amber-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q2" value="st" class="mt-1 text-amber-600 focus:ring-amber-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">「言葉が通じた」「美味しくご飯が食べられた」喜びを支えたい</span>
+            </label>
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q2" value="ot_st" class="mt-1 text-teal-600 focus:ring-teal-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">落ち込んでいる人の悩みをじっくり聞いて安心させてあげたい</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-full bg-teal-600 text-white font-extrabold text-xs flex items-center justify-center">Q3</span>
+            <label class="font-extrabold text-slate-900 text-base sm:text-lg">新しいテクノロジー（AIや3Dプリンター等）への関心は？</label>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pl-9">
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q3" value="ot" class="mt-1 text-teal-600 focus:ring-teal-500" required>
+              <span class="text-xs sm:text-sm font-medium text-slate-700">大いにある！3Dプリンタで道具を作ったり、デジタルで生活を便利にしたい</span>
+            </label>
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-blue-500 hover:bg-blue-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q3" value="pt" class="mt-1 text-blue-600 focus:ring-blue-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">歩行ロボットスーツや動作解析センサーなど筋力メカニズムに興味がある</span>
+            </label>
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-amber-500 hover:bg-amber-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q3" value="st" class="mt-1 text-amber-600 focus:ring-amber-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">音声認識AIや視線入力タブレットなどコミュニケーション技術に興味がある</span>
+            </label>
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q3" value="ot_pt" class="mt-1 text-teal-600 focus:ring-teal-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">ITには詳しくないが、人との温かいふれあいを一番大切にしたい</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-full bg-teal-600 text-white font-extrabold text-xs flex items-center justify-center">Q4</span>
+            <label class="font-extrabold text-slate-900 text-base sm:text-lg">将来働いてみたい環境や雰囲気は？</label>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pl-9">
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q4" value="ot" class="mt-1 text-teal-600 focus:ring-teal-500" required>
+              <span class="text-xs sm:text-sm font-medium text-slate-700">病院だけでなく、子どもの療育センターや地域、精神科など幅広い選択肢がほしい</span>
+            </label>
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-blue-500 hover:bg-blue-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q4" value="pt" class="mt-1 text-blue-600 focus:ring-blue-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">総合病院のリハビリテーション科や整形外科、スポーツクリニック</span>
+            </label>
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-amber-500 hover:bg-amber-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q4" value="st" class="mt-1 text-amber-600 focus:ring-amber-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">耳鼻咽喉科、小児のことばの教室、急性期病院の脳神経内科</span>
+            </label>
+            <label class="flex items-start gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 cursor-pointer transition-all">
+              <input type="radio" name="q4" value="ot_st" class="mt-1 text-teal-600 focus:ring-teal-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">患者さんの自宅に訪問して、家族と一緒に生活を支えたい</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- 送信ボタン -->
+        <div class="text-center pt-4">
+          <button type="submit" class="inline-flex items-center gap-2 px-10 py-4 rounded-full bg-gradient-to-r from-teal-600 to-emerald-600 text-white font-extrabold text-base shadow-lg shadow-teal-600/30 hover:shadow-teal-600/50 hover:scale-105 transition-all">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+            診断結果を見る
+          </button>
+        </div>
+      </form>
+
+      <!-- 診断結果表示モーダル / コンテナ -->
+      <div id="diagResult" class="hidden mt-8 bg-white rounded-3xl p-6 sm:p-10 border-2 border-teal-500 shadow-2xl space-y-6">
+        <div class="text-center space-y-2">
+          <span class="text-xs font-black tracking-widest text-teal-600 uppercase">Diagnosis Result</span>
+          <h3 id="diagTitle" class="text-2xl sm:text-3xl font-black text-slate-900">
+            診断結果
+          </h3>
+          <p id="diagDesc" class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+            ここに解説が入ります。
+          </p>
+        </div>
+
+        <!-- スコア比較バー -->
+        <div class="bg-slate-50 rounded-2xl p-6 space-y-4 max-w-xl mx-auto border border-slate-200">
+          <div>
+            <div class="flex justify-between text-xs font-bold mb-1">
+              <span class="text-teal-700">作業療法士 (OT) マッチ度</span>
+              <span id="diagScoreOT" class="text-teal-700">95%</span>
+            </div>
+            <div class="w-full bg-slate-200 rounded-full h-3">
+              <div id="diagOtMatchBar" class="bg-teal-600 h-3 rounded-full transition-all duration-1000" style="width: 95%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-bold mb-1">
+              <span class="text-blue-700">理学療法士 (PT) マッチ度</span>
+              <span id="diagScorePT" class="text-blue-700">65%</span>
+            </div>
+            <div class="w-full bg-slate-200 rounded-full h-2.5">
+              <div class="bg-blue-500 h-2.5 rounded-full" style="width: 65%;"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-bold mb-1">
+              <span class="text-amber-700">言語聴覚士 (ST) マッチ度</span>
+              <span id="diagScoreST" class="text-amber-700">60%</span>
+            </div>
+            <div class="w-full bg-slate-200 rounded-full h-2.5">
+              <div class="bg-amber-500 h-2.5 rounded-full" style="width: 60%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center pt-2">
+          <button id="closeDiagModal" class="px-6 py-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-colors">
+            もう一度診断する
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: 作業療法士の4大活躍フィールド -->
+  <section id="fields" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-bold border border-teal-200">
+          <i data-lucide="compass" class="w-4 h-4"></i> CAREER FIELDS
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900">
+          あなたの個性が活きる！ <span class="text-teal-600">4つの活躍舞台</span>
+        </h2>
+        <p class="text-slate-600 leading-relaxed">
+          作業療法士の職場は病院だけではありません。赤ん坊からお年寄りまで、人生のあらゆるフェーズに寄り添える幅広いフィールドがあります。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+        <!-- Field 1 -->
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-teal-500 hover:shadow-lg transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 text-teal-600 flex items-center justify-center font-black text-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+              01
+            </div>
+            <h3 class="text-lg font-black text-slate-900 mb-2">身体障害領域</h3>
+            <p class="text-xs text-teal-700 font-bold mb-3">総合病院・リハビリ病院</p>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              脳梗塞、骨折、交通事故、難病などで身体が不自由になった方の「手先の動き」「日常生活」「職場復帰」を支援。
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80">
+            <span class="text-[11px] font-bold text-slate-500">キーワード:</span>
+            <div class="flex flex-wrap gap-1 mt-1">
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">上肢リハ</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">高次脳機能</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">スプリント</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Field 2 -->
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-purple-500 hover:shadow-lg transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-600 flex items-center justify-center font-black text-xl mb-4 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+              02
+            </div>
+            <h3 class="text-lg font-black text-slate-900 mb-2">精神障害領域</h3>
+            <p class="text-xs text-purple-700 font-bold mb-3">精神科病院・メンタルクリニック</p>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              うつ病、不安障害、統合失調症など、心に辛さを抱えた人が安心して過ごせる居場所や、作業を通じた自信回復・社会復帰を支援。
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80">
+            <span class="text-[11px] font-bold text-slate-500">キーワード:</span>
+            <div class="flex flex-wrap gap-1 mt-1">
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">メンタルヘルス</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">デイケア</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">復職(リワーク)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Field 3 -->
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-orange-500 hover:shadow-lg transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center font-black text-xl mb-4 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+              03
+            </div>
+            <h3 class="text-lg font-black text-slate-900 mb-2">発達障害・小児領域</h3>
+            <p class="text-xs text-orange-700 font-bold mb-3">小児療育センター・放課後等デイ</p>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              自閉スペクトラム症や脳性麻痺など、発達に個性を持つ子どもたちへ。遊びを通じて心身の成長と「できた！」喜びを育みます。
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80">
+            <span class="text-[11px] font-bold text-slate-500">キーワード:</span>
+            <div class="flex flex-wrap gap-1 mt-1">
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">感覚統合</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">遊びリハ</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">学校連携</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Field 4 -->
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-emerald-500 hover:shadow-lg transition-all flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-black text-xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+              04
+            </div>
+            <h3 class="text-lg font-black text-slate-900 mb-2">高齢者・地域領域</h3>
+            <p class="text-xs text-emerald-700 font-bold mb-3">訪問リハビリ・特養・地域包括</p>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              「住み慣れた家でずっと暮らしたい」という高齢者や認知症の方の生活環境をデザイン。住宅改修や家族の介護負担軽減もサポート。
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80">
+            <span class="text-[11px] font-bold text-slate-500">キーワード:</span>
+            <div class="flex flex-wrap gap-1 mt-1">
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">在宅生活</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">認知症ケア</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">住環境改善</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: 数字とデータで見る作業療法士（高校生・保護者向け） -->
+  <section id="future-preview" class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-100 text-teal-800 text-xs font-bold border border-teal-200">
+          <i data-lucide="trending-up" class="w-4 h-4 text-teal-600"></i> FACTS & NUMBERS
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900">
+          数字で見る <span class="text-teal-600">作業療法士のリアル</span>
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          国家資格ならではの安定性と、超高齢社会・メンタルヘルス社会における高い将来性をデータで確認しましょう。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm text-center">
+          <span class="text-xs font-bold text-slate-400 block mb-2">就職決定率</span>
+          <div class="text-4xl sm:text-5xl font-black text-teal-600 font-display">ほぼ100%</div>
+          <p class="text-xs text-slate-600 mt-2">医療・福祉・教育など全国から求人が殺到する売り手市場</p>
+        </div>
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm text-center">
+          <span class="text-xs font-bold text-slate-400 block mb-2">男女比率</span>
+          <div class="text-3xl sm:text-4xl font-black text-slate-800 font-display">男性4 : 女性6</div>
+          <p class="text-xs text-slate-600 mt-2">力仕事だけでなく細やかな心遣いが活きるため女性も多数活躍</p>
+        </div>
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm text-center">
+          <span class="text-xs font-bold text-slate-400 block mb-2">国家試験合格率</span>
+          <div class="text-4xl sm:text-5xl font-black text-blue-600 font-display">約85%</div>
+          <p class="text-xs text-slate-600 mt-2">養成校でしっかり学べば確実に取得できる国家資格</p>
+        </div>
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm text-center">
+          <span class="text-xs font-bold text-slate-400 block mb-2">社会のニーズ</span>
+          <div class="text-3xl sm:text-4xl font-black text-orange-500 font-display">右肩上がり</div>
+          <p class="text-xs text-slate-600 mt-2">高齢化に加え、子どもの療育・若者のメンタル不調で需要急増</p>
+        </div>
+      </div>
+
+      <!-- 進路ルートマップ -->
+      <div class="mt-16 bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+        <h3 class="text-xl font-black text-slate-900 mb-6 flex items-center gap-2">
+          <i data-lucide="graduation-cap" class="w-6 h-6 text-teal-600"></i>
+          作業療法士になるまでのロードマップ（高校生向け）
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+          <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200">
+            <span class="text-xs font-extrabold text-teal-600 block mb-1">STEP 1</span>
+            <h4 class="font-bold text-slate-900 mb-2">高校卒業後、養成校へ進学</h4>
+            <p class="text-xs text-slate-600">
+              4年制大学、3年制または4年制の専門学校、短期大学（3年）など自分に合った学校を選択。
+            </p>
+          </div>
+          <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200">
+            <span class="text-xs font-extrabold text-teal-600 block mb-1">STEP 2</span>
+            <h4 class="font-bold text-slate-900 mb-2">医学知識・実習を修得</h4>
+            <p class="text-xs text-slate-600">
+              解剖学、生理学、心理学などを学び、実際の病院や施設で臨床実習を体験。
+            </p>
+          </div>
+          <div class="bg-teal-50 rounded-2xl p-5 border border-teal-300">
+            <span class="text-xs font-extrabold text-teal-700 block mb-1">STEP 3</span>
+            <h4 class="font-bold text-teal-950 mb-2">国家試験合格 → プロへ！</h4>
+            <p class="text-xs text-teal-900">
+              厚生労働省の国家資格を取得。全国の医療機関や施設でプロのOTとしてデビュー！
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 特設サイトへのハイパードライブ誘導セクション（NEXT-GEN OT TECH LAB） -->
+  <section class="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-teal-950 text-white relative overflow-hidden">
+    <!-- 背景グロー -->
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- 左側テキスト -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-bold border border-cyan-500/30">
+            <i data-lucide="cpu" class="w-4 h-4"></i> SPECIAL FEATURE
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black leading-tight tracking-tight">
+            リハビリは、ついに<br>
+            <span class="text-gradient-cyber">メイカーズ＆AIの新時代</span>へ。
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            3Dプリンターでその人の手だけにフィットする道具を自作する。<br>
+            AIで肉眼では見えない微細な回復をデータ化する。<br>
+            VRやロボティクスで身体の限界を超える——。<br>
+            <strong class="text-white">テクノロジーに関心があるあなたにこそ知ってほしい、次世代作業療法の全貌がここにあります。</strong>
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a href="nextgen-ot.html" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-slate-950 font-black text-base shadow-xl shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-105 transition-all">
+              <i data-lucide="zap" class="w-5 h-5 fill-slate-950"></i>
+              次世代OT特設ラボを見る（特設サイト）
+            </a>
+          </div>
+        </div>
+
+        <!-- 右側ビジュアルプレビュー -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-cyan-500/40 group">
+            <img src="assets/images/nextgen_ot_hero.jpg" alt="次世代OTラボ：AIモーション解析と3Dプリンターを活用したリハビリ" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="px-2.5 py-1 rounded bg-cyan-500 text-slate-950 text-[10px] font-black uppercase tracking-wider">
+                Next-Gen OT Lab
+              </span>
+              <p class="text-xs font-semibold text-slate-200 mt-1">
+                AIホログラム × 3Dプリンタースプリント × 人間の温かみ
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-teal-500 flex items-center justify-center text-white font-bold">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span class="text-lg font-bold text-white block">OT NAVI</span>
+            <span class="text-xs text-slate-400">作業療法士の魅力探究メディア</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-6 text-xs text-slate-300">
+          <a href="#about" class="hover:text-white transition-colors">作業療法とは</a>
+          <a href="#compare" class="hover:text-white transition-colors">3大リハ職比較</a>
+          <a href="#diagnosis" class="hover:text-white transition-colors">適職診断</a>
+          <a href="#fields" class="hover:text-white transition-colors">4大領域</a>
+          <a href="nextgen-ot.html" class="text-cyan-400 hover:text-cyan-300 font-bold transition-colors">⚡ 次世代OT特設ラボ</a>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-slate-800/80 text-center text-xs text-slate-500">
+        &copy; 2026 OT NAVI - 作業療法士の魅力探究プロジェクト. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
