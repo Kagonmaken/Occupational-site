@@ -140,6 +140,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const diagTitle = document.getElementById('diagTitle');
   const diagDesc = document.getElementById('diagDesc');
   const diagOtMatchBar = document.getElementById('diagOtMatchBar');
+  const diagPtMatchBar = document.getElementById('diagPtMatchBar');
+  const diagStMatchBar = document.getElementById('diagStMatchBar');
   const closeDiagModal = document.getElementById('closeDiagModal');
 
   if (diagnosticForm) {
@@ -151,33 +153,45 @@ document.addEventListener('DOMContentLoaded', () => {
       let stPoints = 0;
 
       for (let [key, val] of formData.entries()) {
-        if (val === 'ot') otPoints += 25;
-        else if (val === 'pt') ptPoints += 25;
-        else if (val === 'st') stPoints += 25;
-        else if (val === 'ot_pt') { otPoints += 15; ptPoints += 15; }
-        else if (val === 'ot_st') { otPoints += 15; stPoints += 15; }
+        if (val === 'ot') {
+          otPoints += 22;
+        } else if (val === 'pt') {
+          ptPoints += 22;
+        } else if (val === 'st') {
+          stPoints += 22;
+        } else if (val === 'ot_pt') {
+          otPoints += 15;
+          ptPoints += 15;
+        } else if (val === 'ot_st') {
+          otPoints += 15;
+          stPoints += 15;
+        }
       }
 
-      // 最低保証スコア
-      otPoints = Math.min(100, Math.max(30, otPoints + 15));
-      ptPoints = Math.min(100, Math.max(25, ptPoints + 10));
-      stPoints = Math.min(100, Math.max(20, stPoints + 10));
+      // ベースポイントとスケーリング（0〜100%の自然なグラデーション）
+      otPoints = Math.min(100, Math.max(35, otPoints + 15));
+      ptPoints = Math.min(100, Math.max(30, ptPoints + 12));
+      stPoints = Math.min(100, Math.max(25, stPoints + 10));
 
+      // パーセンテージ数値とプログレスバーの幅を完全一致させる
       if (diagScoreOT) diagScoreOT.textContent = `${otPoints}%`;
       if (diagScorePT) diagScorePT.textContent = `${ptPoints}%`;
       if (diagScoreST) diagScoreST.textContent = `${stPoints}%`;
+
       if (diagOtMatchBar) diagOtMatchBar.style.width = `${otPoints}%`;
+      if (diagPtMatchBar) diagPtMatchBar.style.width = `${ptPoints}%`;
+      if (diagStMatchBar) diagStMatchBar.style.width = `${stPoints}%`;
 
       if (diagTitle && diagDesc) {
         if (otPoints >= ptPoints && otPoints >= stPoints) {
           diagTitle.innerHTML = `<span class="text-teal-600">作業療法士 (OT)</span> に超ぴったり！✨`;
-          diagDesc.textContent = `あなたは「人の心に寄り添うこと」や「工夫やアイデアで生活を面白くすること」「ものづくりやデジタル」に強い適性があります！患者さん一人ひとりの『人生や生きがい』を再設計するOTは、あなたのクリエイティビティと共感力を最大限に活かせる最高の天職です。`;
+          diagDesc.textContent = `あなたは「人の心に寄り添うこと」や「工夫やアイデアで生活を面白くすること」「人と環境と作業をつなぐ支援」に強い適性があります！患者さん一人ひとりの『人生や生きがい』を再設計するOTは、あなたのクリエイティビティと共感力を最大限に活かせる最高の天職です。`;
         } else if (ptPoints > otPoints && ptPoints >= stPoints) {
           diagTitle.innerHTML = `<span class="text-blue-600">理学療法士 (PT)</span> ＆ 作業療法士の素質アリ！🏃‍♂️`;
-          diagDesc.textContent = `運動やスポーツ、身体の力強いメカニズムに興味があるあなた。立ち上がりや歩行を支えるPTはもちろん、手先の運動やスポーツ復帰をサポートするOT（作業療法士）も非常にマッチします！身体を動かす面白さと生活の工夫を両立できる医療職を探求してみましょう。`;
+          diagDesc.textContent = `運動やスポーツ、身体の力強いメカニズムに興味があるあなた。立ち上がりや歩行を支えるPTはもちろん、手先の運動やスポーツ・職場復帰をサポートするOT（作業療法士）も非常にマッチします！身体を動かす面白さと生活の工夫を両立できる医療職を探求してみましょう。`;
         } else {
           diagTitle.innerHTML = `<span class="text-amber-600">言語聴覚士 (ST)</span> ＆ 作業療法士の素質アリ！🗣️`;
-          diagDesc.textContent = `言葉のコミュニケーションや心理、きめ細やかな対話に強みがあるあなた。話す・聴く・食べるを支えるST、そして心と生活リズムを整える精神科領域のOT（作業療法士）にも非常に強い素質があります！`;
+          diagDesc.textContent = `言葉のコミュニケーションや心理、きめ細やかな対話に強みがあるあなた。話す・聴く・食べるを支えるST、そして心と生活リズムを整える精神科領域や就労支援領域のOT（作業療法士）にも非常に強い素質があります！`;
         }
       }
 
@@ -188,9 +202,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // もう一度診断するボタンクリック時：Q1へ画面遷移＆リセット
   if (closeDiagModal && diagResultModal) {
     closeDiagModal.addEventListener('click', () => {
+      // フォーム入力をリセット
+      if (diagnosticForm) {
+        diagnosticForm.reset();
+      }
+      // 結果モーダルを非表示
       diagResultModal.classList.add('hidden');
+
+      // Q1へスムーズスクロール
+      const q1Element = document.getElementById('diagQ1');
+      if (q1Element) {
+        q1Element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // 最初のラジオボタンにフォーカス
+        const firstRadio = q1Element.querySelector('input[type="radio"]');
+        if (firstRadio) {
+          firstRadio.focus();
+        }
+      } else if (diagnosticForm) {
+        diagnosticForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   }
 

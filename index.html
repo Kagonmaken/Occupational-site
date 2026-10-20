@@ -26,9 +26,13 @@
         </div>
         <div>
           <span class="text-xs font-bold tracking-wider text-teal-600 uppercase block font-display">Occupational Therapy</span>
-          <span class="text-xl font-extrabold text-slate-900 tracking-tight flex items-center gap-1.5">
-            OT NAVI <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-teal-100 text-teal-700">魅力解剖</span>
-          </span>
+          <div class="flex items-center gap-2">
+            <div class="inline-flex flex-col items-center">
+              <span class="text-xl font-extrabold text-slate-900 tracking-tight leading-none">OT NAVI</span>
+              <span class="text-[10px] font-bold text-slate-500 tracking-wider text-center mt-1">作業療法士</span>
+            </div>
+            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-teal-100 text-teal-700 self-center">魅力解剖</span>
+          </div>
         </div>
       </a>
 
@@ -43,7 +47,7 @@
           3大リハ職徹底比較
         </a>
         <a href="#diagnosis" class="hover:text-teal-600 transition-colors">適職診断テスト</a>
-        <a href="#fields" class="hover:text-teal-600 transition-colors">4つの活躍舞台</a>
+        <a href="#fields" class="hover:text-teal-600 transition-colors">5つの活躍舞台</a>
         <a href="#future-preview" class="hover:text-teal-600 transition-colors">数字と将来性</a>
         <a href="nextgen-ot.html" class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-600 text-white shadow-sm hover:shadow-cyan-500/25 hover:scale-105 transition-all text-xs font-black tracking-wide">
           <i data-lucide="cpu" class="w-4 h-4"></i>
@@ -62,7 +66,7 @@
       <a href="#about" class="block text-slate-700 font-bold py-2 border-b border-slate-100">作業療法とは？</a>
       <a href="#compare" class="block text-slate-700 font-bold py-2 border-b border-slate-100">3大リハ職徹底比較</a>
       <a href="#diagnosis" class="block text-slate-700 font-bold py-2 border-b border-slate-100">適職診断テスト</a>
-      <a href="#fields" class="block text-slate-700 font-bold py-2 border-b border-slate-100">4つの活躍舞台</a>
+      <a href="#fields" class="block text-slate-700 font-bold py-2 border-b border-slate-100">5つの活躍舞台</a>
       <a href="nextgen-ot.html" class="block text-teal-600 font-bold py-2">⚡ 次世代OT特設ラボ（AI・3Dプリンター）</a>
     </div>
   </header>
@@ -97,7 +101,7 @@
             </div>
             <div class="bg-white/90 border border-slate-200/80 rounded-2xl p-3 shadow-xs">
               <span class="text-xs font-bold text-teal-600 block">社会の需要</span>
-              <span class="text-sm font-extrabold text-slate-800">就職率 ほぼ100%</span>
+              <span class="text-sm font-extrabold text-slate-800">就職内定率 100%</span>
             </div>
             <div class="bg-white/90 border border-slate-200/80 rounded-2xl p-3 shadow-xs">
               <span class="text-xs font-bold text-cyan-600 block">新時代リハビリ</span>
@@ -109,7 +113,7 @@
           <div class="flex flex-wrap items-center gap-4 pt-4">
             <a href="#compare" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-teal-600 text-white font-bold text-base shadow-lg shadow-teal-600/30 hover:bg-teal-700 hover:scale-105 transition-all">
               <i data-lucide="scale" class="w-5 h-5"></i>
-              理学療法士(PT)との違いを見る
+              理学療法士（PT）や言語聴覚士（ST）との違いを見る
             </a>
             <a href="#diagnosis" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-slate-800 font-bold text-base border border-slate-300/80 shadow-xs hover:bg-slate-50 hover:border-slate-400 transition-all">
               <i data-lucide="help-circle" class="w-5 h-5 text-teal-600"></i>
@@ -273,7 +277,7 @@
           <i data-lucide="git-compare" class="w-4 h-4 text-blue-600"></i> COMPARISON GUIDE
         </div>
         <h2 class="text-3xl sm:text-4xl font-black text-slate-900">
-          どこが違うの？ <span class="text-teal-600">PT・OT・ST</span> 徹底差別化比較
+          どこが違うの？ <span class="text-teal-600">PT・OT・ST</span>
         </h2>
         <p class="text-slate-600 leading-relaxed">
           リハビリテーションの現場を支える3大国家資格。よく似ていると言われますが、<strong class="text-slate-800">患者さんへのアプローチの「目的」と「得意技」が全く異なります！</strong>
@@ -561,7 +565,7 @@
       <!-- 診断フォーム -->
       <form id="diagnosticForm" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl space-y-8">
         <!-- Q1 -->
-        <div class="space-y-3">
+        <div id="diagQ1" class="space-y-3 scroll-mt-28">
           <div class="flex items-center gap-2">
             <span class="w-7 h-7 rounded-full bg-teal-600 text-white font-extrabold text-xs flex items-center justify-center">Q1</span>
             <label class="font-extrabold text-slate-900 text-base sm:text-lg">普段、どんなことにワクワクしますか？</label>
@@ -693,7 +697,7 @@
               <span id="diagScoreOT" class="text-teal-700">95%</span>
             </div>
             <div class="w-full bg-slate-200 rounded-full h-3">
-              <div id="diagOtMatchBar" class="bg-teal-600 h-3 rounded-full transition-all duration-1000" style="width: 95%;"></div>
+              <div id="diagOtMatchBar" class="bg-teal-600 h-3 rounded-full transition-all duration-700" style="width: 95%;"></div>
             </div>
           </div>
           <div>
@@ -702,7 +706,7 @@
               <span id="diagScorePT" class="text-blue-700">65%</span>
             </div>
             <div class="w-full bg-slate-200 rounded-full h-2.5">
-              <div class="bg-blue-500 h-2.5 rounded-full" style="width: 65%;"></div>
+              <div id="diagPtMatchBar" class="bg-blue-500 h-2.5 rounded-full transition-all duration-700" style="width: 65%;"></div>
             </div>
           </div>
           <div>
@@ -711,7 +715,7 @@
               <span id="diagScoreST" class="text-amber-700">60%</span>
             </div>
             <div class="w-full bg-slate-200 rounded-full h-2.5">
-              <div class="bg-amber-500 h-2.5 rounded-full" style="width: 60%;"></div>
+              <div id="diagStMatchBar" class="bg-amber-500 h-2.5 rounded-full transition-all duration-700" style="width: 60%;"></div>
             </div>
           </div>
         </div>
@@ -725,7 +729,7 @@
     </div>
   </section>
 
-  <!-- SECTION 4: 作業療法士の4大活躍フィールド -->
+  <!-- SECTION 4: 作業療法士の5大活躍フィールド -->
   <section id="fields" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto space-y-4">
@@ -733,14 +737,14 @@
           <i data-lucide="compass" class="w-4 h-4"></i> CAREER FIELDS
         </div>
         <h2 class="text-3xl sm:text-4xl font-black text-slate-900">
-          あなたの個性が活きる！ <span class="text-teal-600">4つの活躍舞台</span>
+          あなたの個性が活きる！ <span class="text-teal-600">5つの活躍舞台</span>
         </h2>
         <p class="text-slate-600 leading-relaxed">
-          作業療法士の職場は病院だけではありません。赤ん坊からお年寄りまで、人生のあらゆるフェーズに寄り添える幅広いフィールドがあります。
+          作業療法士の職場は病院だけではありません。赤ん坊からお年寄り、そして「働くこと（就労）」まで、人生のあらゆるフェーズに寄り添える幅広いフィールドがあります。
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
         <!-- Field 1 -->
         <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-teal-500 hover:shadow-lg transition-all flex flex-col justify-between group">
           <div>
@@ -748,9 +752,9 @@
               01
             </div>
             <h3 class="text-lg font-black text-slate-900 mb-2">身体障害領域</h3>
-            <p class="text-xs text-teal-700 font-bold mb-3">総合病院・リハビリ病院</p>
+            <p class="text-xs text-teal-700 font-bold mb-3">総合病院・リハビリ専門病院</p>
             <p class="text-xs text-slate-600 leading-relaxed">
-              脳梗塞、骨折、交通事故、難病などで身体が不自由になった方の「手先の動き」「日常生活」「職場復帰」を支援。
+              脳梗塞、骨折、交通事故、神経難病などで身体が不自由になった方の「手先の動き」「日常生活」「社会復帰」を支援。
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-slate-200/80">
@@ -758,7 +762,7 @@
             <div class="flex flex-wrap gap-1 mt-1">
               <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">上肢リハ</span>
               <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">高次脳機能</span>
-              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">スプリント</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">装具・スプリント</span>
             </div>
           </div>
         </div>
@@ -772,15 +776,15 @@
             <h3 class="text-lg font-black text-slate-900 mb-2">精神障害領域</h3>
             <p class="text-xs text-purple-700 font-bold mb-3">精神科病院・メンタルクリニック</p>
             <p class="text-xs text-slate-600 leading-relaxed">
-              うつ病、不安障害、統合失調症など、心に辛さを抱えた人が安心して過ごせる居場所や、作業を通じた自信回復・社会復帰を支援。
+              うつ病、不安症、統合失調症など、心に辛さを抱えた人が安心して過ごせる居場所や、作業を通じた自信回復・社会参加を支援。
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-slate-200/80">
             <span class="text-[11px] font-bold text-slate-500">キーワード:</span>
             <div class="flex flex-wrap gap-1 mt-1">
               <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">メンタルヘルス</span>
-              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">デイケア</span>
-              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">復職(リワーク)</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">精神科デイケア</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">生活リズム再建</span>
             </div>
           </div>
         </div>
@@ -801,8 +805,8 @@
             <span class="text-[11px] font-bold text-slate-500">キーワード:</span>
             <div class="flex flex-wrap gap-1 mt-1">
               <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">感覚統合</span>
-              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">遊びリハ</span>
-              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">学校連携</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">遊びを通じたリハ</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">学校・家庭連携</span>
             </div>
           </div>
         </div>
@@ -814,7 +818,7 @@
               04
             </div>
             <h3 class="text-lg font-black text-slate-900 mb-2">高齢者・地域領域</h3>
-            <p class="text-xs text-emerald-700 font-bold mb-3">訪問リハビリ・特養・地域包括</p>
+            <p class="text-xs text-emerald-700 font-bold mb-3">訪問リハビリ・特養・地域包括支援</p>
             <p class="text-xs text-slate-600 leading-relaxed">
               「住み慣れた家でずっと暮らしたい」という高齢者や認知症の方の生活環境をデザイン。住宅改修や家族の介護負担軽減もサポート。
             </p>
@@ -822,9 +826,125 @@
           <div class="mt-6 pt-4 border-t border-slate-200/80">
             <span class="text-[11px] font-bold text-slate-500">キーワード:</span>
             <div class="flex flex-wrap gap-1 mt-1">
-              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">在宅生活</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">在宅生活支援</span>
               <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">認知症ケア</span>
-              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">住環境改善</span>
+              <span class="text-[10px] bg-white px-2 py-0.5 rounded border border-slate-200">住環境デザイン</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Field 5: 就労支援・復職（リワーク）領域 -->
+        <div class="bg-gradient-to-br from-teal-50/90 via-white to-emerald-50/70 text-slate-800 rounded-3xl p-6 border-2 border-teal-500 hover:border-teal-600 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group md:col-span-2 lg:col-span-2 relative overflow-hidden">
+          <div class="relative z-10">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-teal-600 text-white flex items-center justify-center font-black text-xl shadow-md shadow-teal-600/20 group-hover:scale-105 transition-transform">
+                05
+              </div>
+              <span class="px-3 py-1 rounded-full bg-teal-100 text-teal-800 border border-teal-200 text-[11px] font-black tracking-wide">
+                ★ 注目度急上昇・多職種をリードする中核領域
+              </span>
+            </div>
+            <h3 class="text-xl font-black text-slate-900 mb-2">就労支援・復職（リワーク）領域</h3>
+            <p class="text-xs text-teal-700 font-bold mb-3">就労移行支援事業所・障害者職業センター・リワーク施設・企業</p>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              病気や事故の後遺症、精神疾患、発達障害などがあっても「働きたい！」という切実な想いを実現する領域。単に休養を勧めるのではなく、医学的見地から<strong class="text-slate-800 font-bold">「人と環境と作業」のバランスを最適化し、障害者が無理なく復職・継続雇用できる環境を創り出す、他の専門職をリードするプロフェッショナル</strong>です。
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-teal-100 relative z-10 flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <span class="text-[11px] font-bold text-slate-500">キーワード:</span>
+              <div class="flex flex-wrap gap-1 mt-1">
+                <span class="text-[10px] bg-white px-2.5 py-0.5 rounded border border-teal-200 text-teal-800 font-semibold shadow-2xs">復職(リワーク)支援</span>
+                <span class="text-[10px] bg-white px-2.5 py-0.5 rounded border border-teal-200 text-teal-800 font-semibold shadow-2xs">人と環境と作業の調和</span>
+                <span class="text-[10px] bg-white px-2.5 py-0.5 rounded border border-teal-200 text-teal-800 font-semibold shadow-2xs">職場環境調整</span>
+                <span class="text-[10px] bg-white px-2.5 py-0.5 rounded border border-teal-200 text-teal-800 font-semibold shadow-2xs">ジョブコーチ連携</span>
+              </div>
+            </div>
+            <a href="#work-support-detail" class="inline-flex items-center gap-1 text-xs font-extrabold text-teal-700 hover:text-teal-900 transition-colors">
+              就労支援の詳しい仕組みを見る <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 就労支援スペシャル特集ブロック -->
+      <div id="work-support-detail" class="mt-16 bg-gradient-to-br from-teal-50/90 via-white to-cyan-50/60 rounded-3xl p-8 sm:p-12 text-slate-800 border-2 border-teal-200 shadow-xl relative overflow-hidden scroll-mt-24">
+        <!-- 背景の装飾グロー（淡く爽やかなトーン） -->
+        <div class="absolute -top-24 -right-24 w-80 h-80 bg-teal-200/40 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 space-y-8">
+          <div class="max-w-3xl space-y-4">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100 text-teal-800 text-xs font-black tracking-wide border border-teal-300">
+              <i data-lucide="briefcase" class="w-4 h-4 text-teal-700"></i> PICK UP：就労支援
+            </div>
+            <h3 class="text-2xl sm:text-4xl font-black text-slate-900 leading-tight">
+              なぜ、作業療法士は<br>
+              <span class="text-teal-600">
+                「障害者の復職に欠かせない存在」
+              </span>なのか？
+            </h3>
+            <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+              作業療法士（OT）が就労支援で活躍している理由は、単なる身体機能の回復にとどまらず、<strong class="text-teal-800 font-bold">「仕事や生活行為（作業）そのものへの適応」</strong>を医学的・心理社会的視点から専門的に支援できる職種だからです。
+            </p>
+          </div>
+
+          <!-- 3つの専門力グリッド -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- 柱 1: 幅広い障害への対応力 -->
+            <div class="bg-white rounded-2xl p-6 border border-teal-100 shadow-sm hover:border-teal-400 hover:shadow-md transition-all flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-black mb-4">
+                  <i data-lucide="shield-check" class="w-5 h-5"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-900 mb-2">◯ 幅広い障害への対応力</h4>
+                <p class="text-xs text-teal-700 font-bold mb-3">見えにくい課題の専門アセスメント</p>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  身体障害だけでなく、精神疾患、発達障害、高次脳機能障害など、就労に影響する見えにくい課題（集中力、対人コミュニケーション、疲労管理など）を専門的にアセスメントできます。
+                </p>
+              </div>
+            </div>
+
+            <!-- 柱 2: 独自の「作業分析」技術 -->
+            <div class="bg-white rounded-2xl p-6 border border-teal-100 shadow-sm hover:border-teal-400 hover:shadow-md transition-all flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black mb-4">
+                  <i data-lucide="layers" class="w-5 h-5"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-900 mb-2">◯ 独自の「作業分析」技術</h4>
+                <p class="text-xs text-emerald-700 font-bold mb-3">業務工程の客観的評価・抽出</p>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  実際の業務内容を工程ごとに細かく分解し、「どの工程でつまずき、何があれば遂行できるか」を客観的に評価・抽出できます。
+                </p>
+              </div>
+            </div>
+
+            <!-- 柱 3: 職場環境と合理的配慮の調整力 -->
+            <div class="bg-white rounded-2xl p-6 border border-teal-100 shadow-sm hover:border-teal-400 hover:shadow-md transition-all flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-black mb-4">
+                  <i data-lucide="sliders" class="w-5 h-5"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-900 mb-2">◯ 職場環境と合理的配慮の調整力</h4>
+                <p class="text-xs text-blue-700 font-bold mb-3">本人と企業をつなぐ具体的橋渡し</p>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  本人の訓練だけでなく、手順の工夫や補助具の提案、企業側が配慮すべき事項（指示の出し方や休憩の取り方など）を具体的かつ現実的な形で橋渡しできます。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 多職種連携・合意形成支援の図解 -->
+          <div class="bg-white/95 rounded-2xl p-6 border-2 border-teal-200 shadow-sm flex flex-col md:flex-row items-center gap-6">
+            <div class="w-14 h-14 rounded-2xl bg-teal-600 text-white flex items-center justify-center shrink-0 font-black shadow-md shadow-teal-600/20">
+              <i data-lucide="users" class="w-8 h-8"></i>
+            </div>
+            <div class="space-y-1 text-center md:text-left">
+              <h5 class="font-extrabold text-slate-900 text-base sm:text-lg">
+                作業遂行の視点から、多職種・企業間の連携と合意形成を支援
+              </h5>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                主治医の医学的判断や支援機関の計画を踏まえ、実際の業務内容（タスク）や作業環境を客観的に評価します。本人の作業能力と職場の要求水準のギャップを埋める具体的な工夫（手順書、治具、休憩設計など）を提案し、実行性の高い復職・定着を後押しします。
+              </p>
             </div>
           </div>
         </div>
@@ -849,9 +969,9 @@
 
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
         <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm text-center">
-          <span class="text-xs font-bold text-slate-400 block mb-2">就職決定率</span>
-          <div class="text-4xl sm:text-5xl font-black text-teal-600 font-display">ほぼ100%</div>
-          <p class="text-xs text-slate-600 mt-2">医療・福祉・教育など全国から求人が殺到する売り手市場</p>
+          <span class="text-xs font-bold text-slate-400 block mb-2">就職内定率</span>
+          <div class="text-4xl sm:text-5xl font-black text-teal-600 font-display">100%</div>
+          <p class="text-xs text-slate-600 mt-2">医療・福祉・就労支援など全国から求人が殺到する超安定職</p>
         </div>
         <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm text-center">
           <span class="text-xs font-bold text-slate-400 block mb-2">男女比率</span>
@@ -860,8 +980,9 @@
         </div>
         <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm text-center">
           <span class="text-xs font-bold text-slate-400 block mb-2">国家試験合格率</span>
-          <div class="text-4xl sm:text-5xl font-black text-blue-600 font-display">約85%</div>
-          <p class="text-xs text-slate-600 mt-2">養成校でしっかり学べば確実に取得できる国家資格</p>
+          <div class="text-4xl sm:text-5xl font-black text-blue-600 font-display">88.4%</div>
+          <span class="text-xs font-extrabold text-blue-600 block mt-0.5">（5年平均）</span>
+          <p class="text-xs text-slate-600 mt-2">本校でしっかり学べば確実に取得できる国家資格</p>
         </div>
         <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm text-center">
           <span class="text-xs font-bold text-slate-400 block mb-2">社会のニーズ</span>
@@ -964,14 +1085,14 @@
           </div>
           <div>
             <span class="text-lg font-bold text-white block">OT NAVI</span>
-            <span class="text-xs text-slate-400">作業療法士の魅力探究メディア</span>
+            <span class="text-xs text-slate-400 block mt-0.5">作業療法士の魅力探究メディア</span>
           </div>
         </div>
         <div class="flex flex-wrap gap-6 text-xs text-slate-300">
           <a href="#about" class="hover:text-white transition-colors">作業療法とは</a>
           <a href="#compare" class="hover:text-white transition-colors">3大リハ職比較</a>
           <a href="#diagnosis" class="hover:text-white transition-colors">適職診断</a>
-          <a href="#fields" class="hover:text-white transition-colors">4大領域</a>
+          <a href="#fields" class="hover:text-white transition-colors">5大領域</a>
           <a href="nextgen-ot.html" class="text-cyan-400 hover:text-cyan-300 font-bold transition-colors">⚡ 次世代OT特設ラボ</a>
         </div>
       </div>
