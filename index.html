@@ -384,41 +384,92 @@
               <thead>
                 <tr class="border-b-2 border-slate-200 text-xs font-black text-slate-500 uppercase">
                   <th class="py-3 px-3">比較項目</th>
-                  <th class="py-3 px-3 text-blue-600">PT (理学療法)</th>
-                  <th class="py-3 px-3 text-teal-600 bg-teal-50/70 rounded-t-lg">OT (作業療法)</th>
-                  <th class="py-3 px-3 text-amber-600">ST (言語聴覚)</th>
+                  <th class="py-3 px-3 text-blue-600">PT（理学療法士）</th>
+                  <th class="py-3 px-3 text-teal-600 bg-teal-50/70 rounded-t-lg">OT（作業療法士）</th>
+                  <th class="py-3 px-3 text-amber-600">ST（言語聴覚士）</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-slate-100 text-xs sm:text-sm">
+                <!-- 1. 主な対象動作 -->
                 <tr>
-                  <td class="py-3 px-3 font-bold text-slate-700">主な対象動作</td>
-                  <td class="py-3 px-3">立つ・座る・歩く</td>
-                  <td class="py-3 px-3 bg-teal-50/70 font-bold text-teal-900">手先の作業・生活全般</td>
-                  <td class="py-3 px-3">話す・食べる・聴く</td>
+                  <td class="py-3.5 px-3 font-bold text-slate-700 align-top">主な対象動作</td>
+                  <td class="py-3.5 px-3 text-slate-700 align-top">
+                    <strong class="font-extrabold text-slate-900 block text-xs sm:text-sm">基本動作・移動</strong>
+                    <span class="text-xs text-slate-500 block mt-0.5 leading-snug">（起き上がり、座る、立つ、歩くなど）</span>
+                  </td>
+                  <td class="py-3.5 px-3 bg-teal-50/70 align-top">
+                    <strong class="font-extrabold text-teal-950 block text-xs sm:text-sm">日常生活行為・応用動作</strong>
+                    <span class="text-xs text-teal-800 block mt-0.5 leading-snug">（食事、更衣、家事、仕事、趣味など）</span>
+                  </td>
+                  <td class="py-3.5 px-3 text-slate-700 align-top">
+                    <strong class="font-extrabold text-slate-900 block text-xs sm:text-sm">コミュニケーション・摂食嚥下</strong>
+                    <span class="text-xs text-slate-500 block mt-0.5 leading-snug">（話す、聴く、理解する、食べるなど）</span>
+                  </td>
                 </tr>
+
+                <!-- 2. 主なアプローチ道具 -->
                 <tr>
-                  <td class="py-3 px-3 font-bold text-slate-700">使うリハビリ道具</td>
-                  <td class="py-3 px-3">平行棒・平行トレッドミル</td>
-                  <td class="py-3 px-3 bg-teal-50/70 font-bold text-teal-900">キッチン・工芸・3Dプリンタ・ゲーム</td>
-                  <td class="py-3 px-3">絵カード・タブレット・嚥下食</td>
+                  <td class="py-3.5 px-3 font-bold text-slate-700 align-top">主なアプローチ道具</td>
+                  <td class="py-3.5 px-3 text-xs sm:text-sm text-slate-700 leading-relaxed align-top">
+                    平行棒、トレッドミル、物理療法機器、歩行補助具、エルゴメーター
+                  </td>
+                  <td class="py-3.5 px-3 bg-teal-50/70 text-xs sm:text-sm text-teal-950 font-medium leading-relaxed align-top">
+                    日常生活設備（台所・トイレ等）、作業・工芸用具、パソコン、上肢訓練具
+                  </td>
+                  <td class="py-3.5 px-3 text-xs sm:text-sm text-slate-700 leading-relaxed align-top">
+                    絵カード・検査用紙、タブレット、嚥下調整食、構音・発声訓練機器
+                  </td>
                 </tr>
+
+                <!-- 3. 精神科領域への関与 -->
                 <tr>
-                  <td class="py-3 px-3 font-bold text-slate-700">精神科領域の担当</td>
-                  <td class="py-3 px-3 text-slate-400">× (原則対象外)</td>
-                  <td class="py-3 px-3 bg-teal-50/70 font-bold text-teal-900">◎ (正式な専門領域)</td>
-                  <td class="py-3 px-3 text-slate-400">△ (一部高次脳のみ)</td>
+                  <td class="py-3.5 px-3 font-bold text-slate-700 align-top">精神科領域への関与</td>
+                  <td class="py-3.5 px-3 text-slate-700 align-top">
+                    <strong class="font-extrabold text-slate-800 block text-xs sm:text-sm">△（身体機能維持・予防）</strong>
+                    <span class="text-xs text-slate-500 block mt-0.5 leading-snug">合併症予防、認知症ケア、運動療法</span>
+                  </td>
+                  <td class="py-3.5 px-3 bg-teal-50/70 align-top">
+                    <strong class="font-extrabold text-teal-950 block text-xs sm:text-sm">◎（主要な専門領域）</strong>
+                    <span class="text-xs text-teal-800 block mt-0.5 leading-snug">精神科作業療法、生活リズム・社会復帰支援</span>
+                  </td>
+                  <td class="py-3.5 px-3 text-slate-700 align-top">
+                    <strong class="font-extrabold text-slate-800 block text-xs sm:text-sm">○（専門領域の一角）</strong>
+                    <span class="text-xs text-slate-500 block mt-0.5 leading-snug">高次脳機能障害、摂食嚥下障害、発達障害</span>
+                  </td>
                 </tr>
+
+                <!-- 4. 装具・支援具の適合・調整 -->
                 <tr>
-                  <td class="py-3 px-3 font-bold text-slate-700">道具の改造・工作</td>
-                  <td class="py-3 px-3 text-slate-400">△ (装具の適合確認)</td>
-                  <td class="py-3 px-3 bg-teal-50/70 font-bold text-teal-900">◎ (自助具の設計・製作)</td>
-                  <td class="py-3 px-3 text-slate-400">△ (会話ツールの選定)</td>
+                  <td class="py-3.5 px-3 font-bold text-slate-700 align-top">装具・支援具の適合・調整</td>
+                  <td class="py-3.5 px-3 text-slate-700 align-top">
+                    <strong class="font-extrabold text-slate-800 block text-xs sm:text-sm">○（装具・シーティング）</strong>
+                    <span class="text-xs text-slate-500 block mt-0.5 leading-snug">下肢装具の適合、インソール調整、車椅子適合</span>
+                  </td>
+                  <td class="py-3.5 px-3 bg-teal-50/70 align-top">
+                    <strong class="font-extrabold text-teal-950 block text-xs sm:text-sm">◎（自助具・スプリント）</strong>
+                    <span class="text-xs text-teal-800 block mt-0.5 leading-snug">自助具の作製・工夫、スプリント作製、住環境調整</span>
+                  </td>
+                  <td class="py-3.5 px-3 text-slate-700 align-top">
+                    <strong class="font-extrabold text-slate-800 block text-xs sm:text-sm">○（コミュニケーション機器等）</strong>
+                    <span class="text-xs text-slate-500 block mt-0.5 leading-snug">意思伝達装置の個別設定、ボード作成、食器適合</span>
+                  </td>
                 </tr>
+
+                <!-- 5. 支援を通じて支える価値 -->
                 <tr>
-                  <td class="py-3 px-3 font-bold text-slate-700">患者さんの生きがい</td>
-                  <td class="py-3 px-3">移動の自由</td>
-                  <td class="py-3 px-3 bg-teal-50/70 font-bold text-teal-900">人生の「やりたい」全般</td>
-                  <td class="py-3 px-3">会話と食事の喜び</td>
+                  <td class="py-3.5 px-3 font-bold text-slate-700 align-top">支援を通じて支える価値</td>
+                  <td class="py-3.5 px-3 text-slate-700 align-top">
+                    <strong class="font-extrabold text-slate-900 block text-xs sm:text-sm">活動性と行動範囲の拡大</strong>
+                    <span class="text-xs text-slate-500 block mt-0.5 leading-snug">（自立して移動し、行きたい場所へ行く）</span>
+                  </td>
+                  <td class="py-3.5 px-3 bg-teal-50/70 align-top">
+                    <strong class="font-extrabold text-teal-950 block text-xs sm:text-sm">その人らしい生活と役割の再獲得</strong>
+                    <span class="text-xs text-teal-800 block mt-0.5 leading-snug">（家庭や社会で「やりたいこと」を形にする）</span>
+                  </td>
+                  <td class="py-3.5 px-3 text-slate-700 align-top">
+                    <strong class="font-extrabold text-slate-900 block text-xs sm:text-sm">人とのつながりと食べる喜びの回復</strong>
+                    <span class="text-xs text-slate-500 block mt-0.5 leading-snug">（思いを伝え合い、食事を安全に楽しむ）</span>
+                  </td>
                 </tr>
               </tbody>
             </table>

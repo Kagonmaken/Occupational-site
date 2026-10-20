@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
           },
           {
             label: '理学療法士 (PT)',
-            data: [100, 50, 40, 45, 20, 20],
+            data: [100, 70, 40, 65, 20, 20],
             backgroundColor: 'rgba(59, 130, 246, 0.2)',
             borderColor: '#3b82f6',
             borderWidth: 2,
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
           },
           {
             label: '言語聴覚士 (ST)',
-            data: [25, 30, 60, 40, 100, 100],
+            data: [25, 30, 70, 40, 100, 100],
             backgroundColor: 'rgba(234, 88, 12, 0.2)',
             borderColor: '#ea580c',
             borderWidth: 2,
