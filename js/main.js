@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         datasets: [
           {
             label: '作業療法士 (OT)',
-            data: [75, 100, 95, 95, 60, 70],
+            data: [60, 100, 95, 95, 60, 70],
             backgroundColor: 'rgba(13, 148, 136, 0.25)',
             borderColor: '#0d9488',
             borderWidth: 3,
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
           },
           {
             label: '言語聴覚士 (ST)',
-            data: [25, 30, 70, 40, 100, 100],
+            data: [25, 30, 85, 40, 100, 100],
             backgroundColor: 'rgba(234, 88, 12, 0.2)',
             borderColor: '#ea580c',
             borderWidth: 2,
